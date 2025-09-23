@@ -12,13 +12,11 @@ void main() {
 class MyApp extends StatelessWidget {
   final api = ApiService();
   final storage = StorageService();
-
   MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     final authCubit = AuthCubit(api, storage)..checkLogin();
-
     return BlocProvider.value(
       value: authCubit,
       child: MaterialApp.router(

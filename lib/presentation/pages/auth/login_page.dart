@@ -128,7 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                         validator: (value) {
                           if (value == null || value.isEmpty)
                             return "Password wajib diisi";
-                          if (value.length < 6) return "Minimal 6 karakter";
+                          if (value.length < 4) return "Minimal 4 karakter";
                           return null;
                         },
                       ),

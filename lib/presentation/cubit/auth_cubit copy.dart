@@ -18,11 +18,9 @@ class AuthCubit extends Cubit<AuthState> {
         "password": password,
       });
 
-      // print("Response: $response");
-
       if (response.statusCode == 200 && response.data['status'] == true) {
         final userData = response.data['data']['user'];
-        final tokenData = response.data['data']['accessToken'];
+        final tokenData = response.data['data']['tokens'];
         await storage.saveTokens(tokenData);
         await storage.saveUser(userData);
         final user = UserModel.fromJson(userData);
@@ -36,8 +34,9 @@ class AuthCubit extends Cubit<AuthState> {
       if (e.response != null) {
         final statusCode = e.response?.statusCode;
         final errorMessage = e.response?.data?['message'] ?? e.message;
+
         if (statusCode == 400 || statusCode == 422) {
-          emit(AuthFailure(errorMessage));
+          emit(AuthFailure("Input salah: $errorMessage"));
         } else if (statusCode == 401) {
           emit(AuthFailure("Unauthorized: Token tidak valid"));
         } else if (statusCode == 404) {
@@ -71,11 +70,8 @@ class AuthCubit extends Cubit<AuthState> {
     emit(AuthChecking());
     final token = await storage.getAccessToken();
     final username = await storage.getUsername();
-
-    final userData = await storage.getUser();
-
     if (token != null && username != null) {
-      final user = UserModel.fromJson(userData);
+      final user = UserModel(id: "1", username: username);
       emit(AuthSuccess(user));
     } else {
       emit(AuthInitial());

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_simple_arch/core/theme/app_color.dart';
+import 'package:flutter_simple_arch/presentation/cubit/auth_cubit.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class LogoutButton extends StatelessWidget {
   const LogoutButton({super.key});
@@ -15,7 +18,10 @@ class LogoutButton extends StatelessWidget {
           style: TextStyle(
               color: AppColors.accentRed, fontWeight: FontWeight.bold),
         ),
-        onPressed: () {},
+        onPressed: () {
+          context.read<AuthCubit>().logout();
+          context.go('/login');
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.accentRed.withOpacity(0.1),
           elevation: 0,

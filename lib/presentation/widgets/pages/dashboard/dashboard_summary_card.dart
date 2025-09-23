@@ -35,9 +35,9 @@ class SummaryCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CircleAvatar(
-            radius: 20,
+            radius: 14,
             backgroundColor: Colors.white.withOpacity(0.9),
-            child: Icon(icon, color: color, size: 22),
+            child: Icon(icon, color: color, size: 18),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

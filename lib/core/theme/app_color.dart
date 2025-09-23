@@ -22,8 +22,12 @@ class AppColors {
   static const Color grey = Color(0xFF9E9E9E);
   static const Color greyDark = Color(0xFF424242);
 
+  // Accent Colors
   static const Color accentGreen = Color(0xFF2ED573);
   static const Color accentRed = Color(0xFFFF4757);
+  static const Color accentBlue = Color(0xFF1E90FF);
+  static const Color accentOrange = Color(0xFFFFA502);
 
+  // UI
   static const Color cardBackground = Colors.white;
 }

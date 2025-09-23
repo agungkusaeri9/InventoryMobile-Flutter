@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_simple_arch/core/theme/app_color.dart';
-import 'package:flutter_simple_arch/presentation/pages/message_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_simple_arch/presentation/cubit/auth_cubit.dart';
+import 'package:flutter_simple_arch/presentation/widgets/dashboard/dashboard_summary_card.dart';
 import 'package:flutter_simple_arch/presentation/widgets/pages/dashboard/dashboard_recent_transactions.dart';
 import 'package:flutter_simple_arch/presentation/widgets/pages/dashboard/dashboard_sales_chart.dart';
 import 'package:flutter_simple_arch/presentation/widgets/pages/dashboard/dashboard_section_title.dart';
 import 'package:flutter_simple_arch/presentation/widgets/pages/dashboard/dashboard_summary_card.dart';
 
 class DashboardPage extends StatelessWidget {
+  final FlutterSecureStorage storage = const FlutterSecureStorage();
   const DashboardPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final username = context.select<AuthCubit, String?>(
+      (cubit) => cubit.state is AuthSuccess
+          ? (cubit.state as AuthSuccess).user.username
+          : null,
+    );
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: AppColors.background,
       statusBarIconBrightness: Brightness.dark,
@@ -26,9 +35,9 @@ class DashboardPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text("Halo, Pengguna!",
-                  style:
-                      TextStyle(color: AppColors.textSecondary, fontSize: 16)),
+              Text("Halo, ${username ?? "Guest"}",
+                  style: const TextStyle(
+                      color: AppColors.textSecondary, fontSize: 16)),
               const SizedBox(height: 4),
               const Text("Selamat Datang Kembali 👋",
                   style: TextStyle(
@@ -38,38 +47,7 @@ class DashboardPage extends StatelessWidget {
               const SizedBox(height: 24),
 
               // Summary Cards
-              SizedBox(
-                height: 140,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  physics: const BouncingScrollPhysics(),
-                  children: const [
-                    SummaryCard(
-                        title: "Pengguna",
-                        value: "1,2k",
-                        icon: Icons.people_outline,
-                        color: AppColors.accentGreen),
-                    SizedBox(width: 16),
-                    SummaryCard(
-                        title: "Pesanan",
-                        value: "320",
-                        icon: Icons.shopping_bag_outlined,
-                        color: AppColors.accentGreen),
-                    SizedBox(width: 16),
-                    SummaryCard(
-                        title: "Pendapatan",
-                        value: "\$12k",
-                        icon: Icons.attach_money,
-                        color: AppColors.accentGreen),
-                    SizedBox(width: 16),
-                    SummaryCard(
-                        title: "Produk",
-                        value: "89",
-                        icon: Icons.grid_view_outlined,
-                        color: AppColors.accentGreen),
-                  ],
-                ),
-              ),
+              const DashboardSummaryCard(),
               const SizedBox(height: 30),
 
               const SectionTitle(title: "Analitik Penjualan"),

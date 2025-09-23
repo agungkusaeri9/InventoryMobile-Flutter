@@ -1,3 +1,48 @@
+# # Miscellaneous
+# *.class
+# *.log
+# *.pyc
+# *.swp
+# .DS_Store
+# .atom/
+# .buildlog/
+# .history
+# .svn/
+# migrate_working_dir/
+
+# # IntelliJ related
+# *.iml
+# *.ipr
+# *.iws
+# .idea/
+
+# # The .vscode folder contains launch configuration and tasks you configure in
+# # VS Code which you may wish to be included in version control, so this line
+# # is commented out by default.
+# #.vscode/
+
+# # Flutter/Dart/Pub related
+# **/doc/api/
+# **/ios/Flutter/.last_build_id
+# .dart_tool/
+# .flutter-plugins
+# .flutter-plugins-dependencies
+# .pub-cache/
+# .pub/
+# /build/
+
+# # Symbolication related
+# app.*.symbols
+
+# # Obfuscation related
+# app.*.map.json
+
+# # Android Studio will place build artifacts here
+# /android/app/debug
+# /android/app/profile
+# /android/app/release
+
+
 # Miscellaneous
 *.class
 *.log
@@ -16,10 +61,8 @@ migrate_working_dir/
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# VSCode (kalau lo nggak mau share launch.json / settings.json)
+.vscode/
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -27,9 +70,10 @@ migrate_working_dir/
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
+.packages
 .pub-cache/
 .pub/
-/build/
+build/
 
 # Symbolication related
 app.*.symbols
@@ -37,7 +81,48 @@ app.*.symbols
 # Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
+# Android Studio / Gradle
 /android/app/debug
 /android/app/profile
 /android/app/release
+.gradle/
+captures/
+local.properties
+GeneratedPluginRegistrant.java
+
+# iOS / Xcode
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/ServiceDefinitions.json
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Pods/
+ios/.symlinks/
+/ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# MacOS
+xcuserdata/
+*.xcuserstate
+
+# Web
+lib/generated_plugin_registrant.dart
+
+# Windows
+windows/runner/Runner.rc
+windows/Flutter/GeneratedPluginRegistrant.*
+
+# Linux
+linux/flutter/ephemeral/
+
+# Coverage
+coverage/
+
+# Firebase / secrets (kalau ada)
+google-services.json
+GoogleService-Info.plist
