@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_simple_arch/data/models/product_model.dart';
 import 'package:flutter_simple_arch/presentation/pages/dashboard_page.dart';
 import 'package:flutter_simple_arch/presentation/pages/auth/login_page.dart';
 import 'package:flutter_simple_arch/presentation/pages/message_page.dart';

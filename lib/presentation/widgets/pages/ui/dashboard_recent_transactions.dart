@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_simple_arch/core/theme/app_color.dart';
-import 'package:flutter_simple_arch/presentation/pages/message_page.dart';
-import 'package:flutter_simple_arch/presentation/pages/product/product_page.dart';
-import 'package:flutter_simple_arch/presentation/widgets/custom_bottom_navigation.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/dashboard/dashboard_transaction_item.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/dashboard/dashboard_transaction_item.dart';
 
 class RecentTransactions extends StatelessWidget {
   const RecentTransactions({super.key});

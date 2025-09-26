@@ -6,10 +6,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_simple_arch/presentation/cubit/auth_cubit.dart';
 import 'package:flutter_simple_arch/presentation/widgets/dashboard/dashboard_summary_card.dart';
 import 'package:flutter_simple_arch/presentation/widgets/dashboard/recent_activity.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/dashboard/dashboard_recent_transactions.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/dashboard/dashboard_sales_chart.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/dashboard/dashboard_section_title.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/dashboard/dashboard_summary_card.dart';
+import 'package:flutter_simple_arch/presentation/widgets/dashboard/stock_in_stock_out_chart.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/dashboard/dashboard_section_title.dart';
 
 class DashboardPage extends StatelessWidget {
   final FlutterSecureStorage storage = const FlutterSecureStorage();
@@ -51,12 +49,12 @@ class DashboardPage extends StatelessWidget {
               const DashboardSummaryCard(),
               const SizedBox(height: 30),
 
-              const SectionTitle(title: "Analitik Penjualan"),
+              const SectionTitle(title: "Analitik Stock In & Out"),
               const SizedBox(height: 16),
-              const SalesChart(),
+              const StockInStockOutChart(),
               const SizedBox(height: 30),
 
-              const SectionTitle(title: "Transaksi Terakhir"),
+              const SectionTitle(title: "Aktivitas Terbaru"),
               const SizedBox(height: 16),
               const RecentActivity(),
             ],

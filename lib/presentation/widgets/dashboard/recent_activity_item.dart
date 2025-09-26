@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_simple_arch/core/theme/app_color.dart';
-import 'package:flutter_simple_arch/presentation/pages/dashboard_page.dart';
-import 'package:flutter_simple_arch/presentation/pages/message_page.dart';
 
-class TransactionItem extends StatelessWidget {
+class RecentActivityItem extends StatelessWidget {
   final String title;
   final String date;
-  final String amount;
-  final Color color;
-  final IconData icon;
 
-  const TransactionItem({
-    super.key,
-    required this.title,
-    required this.date,
-    required this.amount,
-    required this.color,
-    required this.icon,
-  });
+  const RecentActivityItem(
+      {super.key, required this.title, required this.date});
+
+  Color get color =>
+      title == "Stock In" ? AppColors.accentGreen : AppColors.accentRed;
+
+  IconData get icon =>
+      title == "Stock In" ? Icons.arrow_downward : Icons.arrow_upward;
 
   @override
   Widget build(BuildContext context) {
@@ -45,11 +40,6 @@ class TransactionItem extends StatelessWidget {
                         color: AppColors.textSecondary, fontSize: 12)),
               ],
             ),
-          ),
-          Text(
-            amount,
-            style: TextStyle(
-                color: color, fontWeight: FontWeight.bold, fontSize: 16),
           ),
         ],
       ),

@@ -3,8 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_simple_arch/presentation/cubit/auth_cubit.dart';
 
 import 'dart:async';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SplashScreenPage extends StatefulWidget {
   const SplashScreenPage({super.key});

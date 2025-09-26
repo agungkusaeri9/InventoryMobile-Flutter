@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_simple_arch/core/theme/app_color.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/product/category_filter.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/product/product_card.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/product/search_bar.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/product/category_filter.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/product/product_card.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/product/search_bar.dart';
 import 'package:go_router/go_router.dart';
 // class AppColors {
 //   static const Color primary = Color(0xFF6C63FF);

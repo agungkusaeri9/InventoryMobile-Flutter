@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_simple_arch/core/theme/app_color.dart';
-import 'package:flutter_simple_arch/presentation/pages/auth/login_page.dart';
-import 'package:flutter_simple_arch/presentation/pages/message_page.dart';
 
 class CategoryFilters extends StatelessWidget {
   final List<String> categories;

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter_simple_arch/core/theme/app_color.dart';
-import 'package:flutter_simple_arch/presentation/pages/message_page.dart';
 
 class TopCategoriesChart extends StatelessWidget {
   const TopCategoriesChart({super.key});

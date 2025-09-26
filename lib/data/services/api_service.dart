@@ -80,7 +80,6 @@ class ApiService {
   }
 
   void _showToast(String message) {
-    print("✅ Toast: $message");
     // Fluttertoast.showToast(
     //   msg: message,
     //   backgroundColor: const Color(0xFFFEE2E2),

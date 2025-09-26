@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_simple_arch/core/theme/app_color.dart';
 import 'package:flutter_simple_arch/data/models/product_model.dart';
-import 'package:flutter_simple_arch/router.dart';
 import 'package:go_router/go_router.dart';
 
 // --- Dummy Data ---

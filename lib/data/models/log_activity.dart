@@ -1,13 +1,15 @@
 class LogActivity {
+  final int id;
   final String username;
-  final String modul;
+  final String module;
   final String action;
   final String description;
   final DateTime date;
 
   LogActivity({
+    required this.id,
     required this.username,
-    required this.modul,
+    required this.module,
     required this.action,
     required this.description,
     required this.date,
@@ -15,16 +17,12 @@ class LogActivity {
 
   factory LogActivity.fromJson(Map<String, dynamic> json) {
     return LogActivity(
+      id: json['id'] ?? 0,
       username: json['username'] ?? "",
-      modul: json['modul'] ?? "",
+      module: json['module'] ?? "",
       action: json['action'] ?? "",
       description: json['description'] ?? "",
-      date: DateTime.parse(json['date'] ?? ""),
+      date: DateTime.parse(json['createdAt']),
     );
   }
-
-//   @override
-//   String toString() {
-//     return "LogActivity(productCount: $productCount, stockInTotalQty: $stockInTotalQty, stockOutTotalQty: $stockOutTotalQty, lowStockCount: $lowStockCount)";
-//   }
 }

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_simple_arch/core/theme/app_color.dart';
-import 'package:flutter_simple_arch/presentation/widgets/custom_bottom_navigation.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/dashboard/dashboard_section_title.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/report/date_range_picker.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/report/downloadable_reports.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/report/summary_grid.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/report/top_categories_chart.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/report/weekly_revenue_chart.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/dashboard/dashboard_section_title.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/report/date_range_picker.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/report/downloadable_reports.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/report/summary_grid.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/report/top_categories_chart.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/report/weekly_revenue_chart.dart';
 
 class ReportsPage extends StatelessWidget {
   const ReportsPage({super.key});

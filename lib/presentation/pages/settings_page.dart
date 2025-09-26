@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_simple_arch/core/theme/app_color.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/dashboard/dashboard_section_title.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/setting/logout_button.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/setting/profile_section.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/setting/setting_item.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/setting/settings_container.dart';
-import 'package:flutter_simple_arch/presentation/widgets/pages/setting/trailing_text.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/dashboard/dashboard_section_title.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/setting/logout_button.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/setting/profile_section.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/setting/setting_item.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/setting/settings_container.dart';
+import 'package:flutter_simple_arch/presentation/widgets/ui/setting/trailing_text.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({super.key});
